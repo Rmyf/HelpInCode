@@ -1,0 +1,23 @@
+.formhigh{
+    display: flex;
+    flex-direction: column;
+ width: 40%;}
+        
+   :required {
+   border: 2px double orange;
+}     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
