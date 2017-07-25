@@ -18,7 +18,7 @@ if(empty($_POST['id'])
     
     $user = new User($id, $crypt2);
     $database = new Database();
-    $user->getId();
+//    $user->getId();
     $database->createUser($user);
     $_SESSION['utilisateur'] = $user;
         header('Location: index.php');

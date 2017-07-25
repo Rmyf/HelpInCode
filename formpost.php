@@ -13,28 +13,29 @@ and open the template in the editor.
         <h1>Ecrire un article</h1>
 
         <section class="formulaire">
-            <form action="post.php" method="POST">
+            <form action="createpost.php" method="POST">
 
 
                 <section class="formpost">
 
-                    <label for="cat">Catégorie: <br/></label>
+                    <label for="cat">Catégorie: </label>
                     <input type="text" name="cat" required/>
                     <br/>
 
-                    <label for="title">Titre:<br/></label>
-                    <input type="text" name="title" required />
+                    <label for="title">Titre:</label>
+                    <input type="text" name="title" required/>
+                    <br/>
 
-                    <label for ="text" placeholder="Tapez votre texte ici"</label>
-                    <textarea name="textarea" autofocus=""accesskey=""rows="10" cols="50"></textarea>
+                    <label for ="text" </label>
+                    <textarea name="text" placeholder="Tapez votre texte ici" autofocus=""accesskey=""rows="10" cols="50"></textarea>
 
                     <input type="submit" value="Valider"/>
 
 
-                    </form>
-                </section>
-                <?php
-                // put your code here
-                ?>
-                </body>
-                </html>
+            </form>
+        </section>
+        <?php
+        // put your code here
+        ?>
+    </body>
+</html>

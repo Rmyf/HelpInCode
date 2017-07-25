@@ -1,23 +1,40 @@
+body { 
+    padding-top: 120px; 
+}
+
+
 .formhigh{
     display: flex;
     flex-direction: column;
- width: 40%;}
-        
-   :required {
-   border: 2px double orange;
-}     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    width: 40%;}
+
+
+
+.border{
+
+    border-top: 1px solid lightgrey;
+}
+
+
+
+.connect{
+    margin-right: 20px;
+
+}
+
+.title,
+.title:hover{
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+

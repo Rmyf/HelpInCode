@@ -8,6 +8,9 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
 
         <title>Inscription</title>
 
@@ -18,13 +21,13 @@ and open the template in the editor.
     <?php
     include_once 'User.php';
     session_start();
-   
-    
-    if(isset($_SESSION['error'])){
-        echo '<p>'.$_SESSION['error'].'</p>';
-    }else {
+
+
+    if (isset($_SESSION['error'])) {
+        echo '<p>' . $_SESSION['error'] . '</p>';
+    } else {
         ?>
-        <form action="inscription.php" method="POST">
+        <form action="inscription.php" method="POST" class="col-sm-6">
             <section class="formhigh">
                 <label for="id">*Identifiant:</label>
                 <input type="text" name="id" placeholder="Identifiant" required/>
@@ -47,6 +50,6 @@ and open the template in the editor.
 
                 <input type="submit" value="Inscription">
             </section>
-<?php } ?>
+        <?php } ?>
     </form>
 </html>

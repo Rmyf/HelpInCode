@@ -14,7 +14,7 @@ if (isset($_POST['id']) && isset($_POST['password'])) {
     $crypt2 = md5($mdp);
 
     $user = $db->connect($id, $mdp);
-    var_dump($user);
+    
     if ($user) {
         $_SESSION['utilisateur'] = $user;
         header('Location: index.php');

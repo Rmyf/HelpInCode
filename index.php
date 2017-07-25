@@ -7,30 +7,50 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
         <title></title>
     </head>
-    <body>
 
-        <h1> Site </h1>
+    <body class="container">
 
 
         <?php
         include_once 'User.php';
+        include_once 'Database.php';
+        include_once 'Posts.php';
+
 
 
         session_start();
 
+        include 'header.php';
+
         if (isset($_SESSION['utilisateur'])) {
+            ?>
+            <div class="addlink">
+                <a href="formpost.php" class="btn btn-primary">Ajouter un article</a>
+            </div>
+        <?php } ?>
 
-            $user = $_SESSION['utilisateur'];
+        <?php
+        $database = new Database();
+        $post = $database->readPostsList();
 
-            echo 'Bienvenue, ' . $user->getId() . '<br/>';
-            echo '<a href="logout.php">Deconnexion</a>';
-        } else {
-            echo '<a href="formulaire.php">Sign Up</a><br/>';
-
-            echo '<a href="connexion.php">Log In</a>';
+        foreach ($post as $article) {
+            echo '<div class="border">';
+            echo "<h2>" . $article->titre . "</h2>";
+            echo "<h3>" . $article->categorie . "</h3>";
+            echo "<p>" . $article->contenu . "</p>";
+            echo "<form action = 'delete.php' method = 'POST'>";
+            echo "<input type = 'hidden' name = 'filename' value = '".$article->titre."'>";
+            echo '<input type = "submit" value = "delete">';
+            echo "</form>";
+            echo "</div>";
         }
+
+        // TODO: lit les posts depuis la base de données
+        // TODO: affiche chaque post
         ?>
     </body>
 </html>
