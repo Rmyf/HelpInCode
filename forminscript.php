@@ -16,7 +16,7 @@ and open the template in the editor.
 
     </head>
 
-    <h1>Inscription</h1>
+    
 
     <?php
     include_once 'User.php';
@@ -27,19 +27,18 @@ and open the template in the editor.
         echo '<p>' . $_SESSION['error'] . '</p>';
     } else {
         ?>
+        <div class="container">
+        <h1>Inscription</h1>
         <form action="inscription.php" method="POST" class="col-sm-6">
             <section class="formhigh">
-                <label for="id">*Identifiant:</label>
-                <input type="text" name="id" placeholder="Identifiant" required/>
+                <label for="login">*Login:</label>
+                <input type="text" name="login" placeholder="Identifiant" required/>
                 <br/>
                 <label for ="photo">Age: </label>
                 <input type="date" name="age" />
                 <br/>
                 <label for ="photo">Photo: </label>
                 <input type="file" placeholder="choisissez votre fichier"/>
-                <br/>
-                <label for ="bio" >Biographie: </label>
-                <textarea name="textarea" autofocus=""accesskey=""rows="10" cols="50"></textarea>       
                 <br/>
                 <label for ="mail" >*Email: </label>
                 <input type="email" name="email" placeholder="email"required >
@@ -52,4 +51,5 @@ and open the template in the editor.
             </section>
         <?php } ?>
     </form>
+    </div>
 </html>

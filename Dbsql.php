@@ -23,9 +23,9 @@ class Dbsql {
     //create new User
     
     function new_user(Utilisateur $user) {
-        $query = $this->db->prepare("INSERT INTO users (id, password, email, reg_date) " .
-                "VALUES (:id, :password, :email, :reg_date);");
-        $query->bindValue(':id', $user->getNom());
+        $query = $this->db->prepare("INSERT INTO users (login, password, email, reg_date) " .
+                "VALUES (:login, :password, :email, :reg_date);");
+        $query->bindValue(':login', $user->getNom());
         $query->bindValue(':password', $user->getPassword());
         $query->bindValue(':email', $user->getEmail());
         $query->bindValue(':reg_date', 'NOW()');

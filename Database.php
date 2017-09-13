@@ -31,10 +31,10 @@ class Database {
         fclose($new_file);
     }
 
-    function connect($id, $mdp) {
+    function connect($login, $mdp) {
 
-        if (is_file('utilisateur/' . $id . '.txt')) {
-            $user = unserialize(file_get_contents('utilisateur/' . $id . '.txt'));
+        if (is_file('utilisateur/' . $login . '.txt')) {
+            $user = unserialize(file_get_contents('utilisateur/' . $login . '.txt'));
 
             if ($user->getPassword() == md5($mdp)) {
 

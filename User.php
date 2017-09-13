@@ -13,24 +13,24 @@
  */
 class User {
     
-    private $id;
+    private $login;
     private $password;
     
-    public function __construct($id, $password) {
-        $this->id = $id;
+    public function __construct($login, $password) {
+        $this->login = $login;
         $this->password = $password;
     }
     
     public function getId() {
-        return $this->id;
+        return $this->login;
     }
 
     public function getPassword() {
         return $this->password;
     }
 
-    public function setId($id) {
-        $this->id = $id;
+    public function setId($login) {
+        $this->login = $login;
     }
 
     public function setPassword($password) {

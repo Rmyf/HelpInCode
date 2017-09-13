@@ -9,7 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <title></title>
+        <title>Ajouter un article</title>
     </head>
 
     <body class="container">
@@ -39,12 +39,12 @@ and open the template in the editor.
 
         foreach ($post as $article) {
             echo '<div class="border">';
-            echo "<h2>" . $article->titre . "</h2>";
-            echo "<h3>" . $article->categorie . "</h3>";
+            echo "<h3>" . $article->titre . "</h3>";
+            echo "<h5>" . $article->categorie . "</h5>";
             echo "<p>" . $article->contenu . "</p>";
             echo "<form action = 'delete.php' method = 'POST'>";
             echo "<input type = 'hidden' name = 'filename' value = '".$article->titre."'>";
-            echo '<input type = "submit" value = "delete">';
+            echo '<input type = "submit" value = "Supprimer" class="btn btn-warning">';
             echo "</form>";
             echo "</div>";
         }

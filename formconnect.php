@@ -10,6 +10,9 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        
+
+        <div class="container">
         <h1>Connexion</h1>
 
         <section class="formulaire">
@@ -18,8 +21,8 @@ and open the template in the editor.
 
                 <section class="formlogin">
 
-                    <label for="id">Identifiant <br/></label>
-                    <input type="text" name="id" placeholder="ID" required/>
+                    <label for="login">Identifiant <br/></label>
+                    <input type="text" name="login" placeholder="ID" required/>
                     <br/>
 
                     <label for="password">Password<br/></label>
@@ -29,6 +32,7 @@ and open the template in the editor.
 
                     </form>
                 </section>
+                </div>
 
                 </body>
                 </html>

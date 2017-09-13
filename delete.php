@@ -1,5 +1,7 @@
 <?php
+
 $filename = $_POST['filename'];
-unlink('utilisateur/' . $filename);
-echo '<p>' . $article . ' has been deleted</p>';
-//header('location: index.php');
+unlink('posts/' . $filename. '.txt');
+echo '<p>' . $filename . ' has been deleted</p>';
+header('location: index.php');
+

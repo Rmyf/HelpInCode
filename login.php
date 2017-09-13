@@ -7,13 +7,13 @@ session_start();
 $db = new Database();
 
 
-if (isset($_POST['id']) && isset($_POST['password'])) {
-    $id = htmlspecialchars($_POST['id']);
+if (isset($_POST['login']) && isset($_POST['password'])) {
+    $login = htmlspecialchars($_POST['login']);
     $mdp = htmlspecialchars($_POST['password']);
 
     $crypt2 = md5($mdp);
 
-    $user = $db->connect($id, $mdp);
+    $user = $db->connect($login, $mdp);
     
     if ($user) {
         $_SESSION['utilisateur'] = $user;
